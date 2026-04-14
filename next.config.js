@@ -8,24 +8,17 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     dangerouslyAllowSVG: true,
   },
-  // Moved from experimental in Next.js 14.x
+  // Next.js 16+ - moved back to top level
   serverExternalPackages: ['@prisma/client', 'bcryptjs'],
-  experimental: {
-    // Required for Prisma on Vercel
-    serverComponentsExternalPackages: ['@prisma/client', 'bcryptjs'],
-  },
-  // Prevent fs/path from being bundled into client
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        path: false,
-        os: false,
-        crypto: false,
-      };
-    }
-    return config;
+  
+  // Turbopack config (replaces webpack for Next.js 16)
+  turbopack: {
+    resolveAlias: {
+      fs: false,
+      path: false,
+      os: false,
+      crypto: false,
+    },
   },
 };
 
