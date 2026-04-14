@@ -8,18 +8,9 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     dangerouslyAllowSVG: true,
   },
-  // Next.js 16+ - moved back to top level
   serverExternalPackages: ['@prisma/client', 'bcryptjs'],
-  
-  // Turbopack config (replaces webpack for Next.js 16)
-  turbopack: {
-    resolveAlias: {
-      fs: false,
-      path: false,
-      os: false,
-      crypto: false,
-    },
-  },
+  // Turbopack is default in Next.js 16, no need for webpack config
+  turbopack: {},
 };
 
 module.exports = nextConfig;
