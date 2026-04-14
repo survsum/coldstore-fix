@@ -1,0 +1,5 @@
+.env
+dev.db
+*.db
+prisma/MIGRATION_INSTRUCTIONS.md
+VERCEL_ISSUES.md

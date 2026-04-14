@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'Outfit', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* ── Light mode ── */
+  --bg-primary:      #f2f6fc;
+  --bg-secondary:    #e4ecf6;
+  --bg-card:         #ffffff;
+  --bg-hover:        #d6e3f0;
+  --text-primary:    #06111f;
+  --text-secondary:  #2c4060;
+  --text-muted:      #5a7898;
+  --border:          rgba(8,30,60,0.12);
+  --border-strong:   rgba(8,30,60,0.22);
+  --accent:          #e63030;
+  --accent-hover:    #c41e1e;
+  --accent-light:    rgba(230,48,48,0.09);
+  --cold-blue:       #1456b0;
+  --cold-blue-light: rgba(20,86,176,0.09);
+  --success:         #16a34a;
+  --success-light:   rgba(22,163,74,0.09);
+  --warning:         #d97706;
+  --warning-light:   rgba(217,119,6,0.09);
+  --chart-1: #e63030; --chart-2: #1456b0;
+  --chart-3: #16a34a; --chart-4: #d97706; --chart-5: #7c3aed;
+
+  /* ── Shop section vars (light) — these sit on top of the canvas/bg ── */
+  --shop-text:       #06111f;
+  --shop-sub:        rgba(6,17,31,0.55);
+  --shop-muted:      rgba(6,17,31,0.35);
+  --shop-border:     rgba(6,17,31,0.12);
+  --shop-card-bg:    rgba(255,255,255,0.75);
+  --shop-card-border:rgba(6,17,31,0.12);
+  --hero-text:       #06111f;
+  --hero-sub:        rgba(6,17,31,0.55);
+  --nav-bg-scrolled: rgba(242,246,252,0.92);
+  --nav-text:        #06111f;
+  --nav-text-muted:  rgba(6,17,31,0.5);
+  --nav-border:      rgba(6,17,31,0.1);
+  --nav-item-hover:  rgba(6,17,31,0.06);
+  --pill-bg:         rgba(6,17,31,0.07);
+  --pill-border:     rgba(6,17,31,0.14);
+  --pill-text:       rgba(6,17,31,0.55);
+  --marquee-bg:      rgba(242,246,252,0.85);
+  --marquee-text:    rgba(6,17,31,0.35);
+  --footer-bg:       rgba(242,246,252,0.9);
+  --footer-text:     rgba(6,17,31,0.45);
+  --footer-head:     #06111f;
+  --sidebar-bg:      #e8f0f8;
+  --sidebar-border:  rgba(6,17,31,0.1);
+  --sidebar-text:    #06111f;
+  --sidebar-sub:     rgba(6,17,31,0.45);
+  --search-bg:       rgba(6,17,31,0.06);
+  --search-border:   rgba(6,17,31,0.12);
+}
+
+.dark {
+  --bg-primary:      #06101e;
+  --bg-secondary:    #0c1a2e;
+  --bg-card:         #0f2040;
+  --bg-hover:        #152840;
+  --text-primary:    #e8f4ff;
+  --text-secondary:  #7aaed4;
+  --text-muted:      #3d6080;
+  --border:          rgba(100,160,220,0.12);
+  --border-strong:   rgba(100,160,220,0.22);
+  --accent:          #ff4444;
+  --accent-hover:    #ff2020;
+  --accent-light:    rgba(255,68,68,0.1);
+  --cold-blue:       #5ab4f5;
+  --cold-blue-light: rgba(90,180,245,0.1);
+  --success:         #22c55e;
+  --success-light:   rgba(34,197,94,0.08);
+  --warning:         #f59e0b;
+  --warning-light:   rgba(245,158,11,0.08);
+  --chart-1: #ff4444; --chart-2: #5ab4f5;
+  --chart-3: #22c55e; --chart-4: #f59e0b; --chart-5: #a78bfa;
+
+  /* ── Shop section vars (dark) ── */
+  --shop-text:       #e8f4ff;
+  --shop-sub:        rgba(232,244,255,0.5);
+  --shop-muted:      rgba(232,244,255,0.28);
+  --shop-border:     rgba(100,160,220,0.12);
+  --shop-card-bg:    rgba(255,255,255,0.05);
+  --shop-card-border:rgba(255,255,255,0.1);
+  --hero-text:       #ffffff;
+  --hero-sub:        rgba(255,255,255,0.5);
+  --nav-bg-scrolled: rgba(6,16,30,0.92);
+  --nav-text:        #ffffff;
+  --nav-text-muted:  rgba(255,255,255,0.55);
+  --nav-border:      rgba(100,160,220,0.1);
+  --nav-item-hover:  rgba(255,255,255,0.08);
+  --pill-bg:         rgba(255,255,255,0.07);
+  --pill-border:     rgba(255,255,255,0.12);
+  --pill-text:       rgba(255,255,255,0.6);
+  --marquee-bg:      rgba(6,16,30,0.6);
+  --marquee-text:    rgba(255,255,255,0.3);
+  --footer-bg:       rgba(6,16,30,0.85);
+  --footer-text:     rgba(255,255,255,0.4);
+  --footer-head:     #ffffff;
+  --sidebar-bg:      linear-gradient(160deg,#0c1a2e 0%,#06101e 100%);
+  --sidebar-border:  rgba(100,160,220,0.12);
+  --sidebar-text:    #e8f4ff;
+  --sidebar-sub:     rgba(232,244,255,0.4);
+  --search-bg:       rgba(255,255,255,0.07);
+  --search-border:   rgba(255,255,255,0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  cursor: auto;
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.admin-page { cursor: auto; }
+.admin-page * { cursor: auto !important; }
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+::selection { background: var(--accent); color: #fff; }
+
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.dark .glass {
+  background: rgba(6,16,30,0.5);
+  border: 1px solid rgba(100,160,220,0.12);
+}
+
+.skeleton {
+  background: linear-gradient(90deg,var(--bg-secondary) 25%,var(--bg-hover) 50%,var(--bg-secondary) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer { 0%{background-position:200% 0}100%{background-position:-200% 0} }
+
+@keyframes marquee { 0%{transform:translateX(0)}100%{transform:translateX(-50%)} }
+.marquee-track { animation: marquee 28s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+
+.link-draw { position:relative; text-decoration:none; }
+.link-draw::after { content:''; position:absolute; left:0; bottom:-2px; width:0; height:1.5px; background:currentColor; transition:width 0.35s cubic-bezier(0.22,1,0.36,1); }
+.link-draw:hover::after { width:100%; }
+
+.admin-sidebar { min-height:100vh; position:sticky; top:0; }
+
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Custom cursor only on desktop pointer devices — never on mobile/tablet */
+@media (hover: hover) and (pointer: fine) {
+  body { cursor: none; }
+}
